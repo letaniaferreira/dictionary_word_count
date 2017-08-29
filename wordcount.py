@@ -12,10 +12,11 @@ word_count = {}
 
 count = 0
 for word in big_word_list:
-    if word not in word_count:
-        word_count[word] = count + 1
-    else:
-        count = count + 1
-    # word_count[word] = count
+    word_count[word] = word_count.get(word, 0) + 1
+    # if word not in word_count:
+    #     word_count[word] = count + 1
+    # else:
+    #     word_count[word] = count + 1
+    # # word_count[word] = count
 print word_count
 
